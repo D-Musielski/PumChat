@@ -14,7 +14,7 @@ public class Common {
         List<QBUser>qbUsers1 = QBUsersHolder.getInstance().getUsersByIds(qbUsers);
         StringBuilder name = new StringBuilder();
         for(QBUser user : qbUsers1)
-            name.append(user.getFullName()).append(" ");
+            name.append(user.getLogin()).append(" ");
         if(name.length() > 30)
             name = name.replace(30, name.length()-1,"...");
         return name.toString();

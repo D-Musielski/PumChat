@@ -45,9 +45,10 @@ public class ChatDialogAdapter extends BaseAdapter{
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        if (view == null){
+        View vieww = view;
+        if (vieww == null){
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.list_chat_dialog, null);
+            vieww = inflater.inflate(R.layout.list_chat_dialog, null);
 
             TextView textTitle;
             TextView textMessage;
@@ -71,6 +72,6 @@ public class ChatDialogAdapter extends BaseAdapter{
             imageView.setImageDrawable(drawable);
 
         }
-        return view;
+        return vieww;
     }
 }

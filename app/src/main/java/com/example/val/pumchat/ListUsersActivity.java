@@ -60,7 +60,7 @@ public class ListUsersActivity extends AppCompatActivity {
 
     private void createGroupChat(SparseBooleanArray checkedItemPositions) {
         final ProgressDialog progressDialog = new ProgressDialog(ListUsersActivity.this);
-        progressDialog.setMessage("Please waiting...");
+        progressDialog.setMessage("Please wait...");
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
@@ -96,7 +96,7 @@ public class ListUsersActivity extends AppCompatActivity {
     private void createPrivateChat(SparseBooleanArray checkedItemPositions) {
 
         final ProgressDialog progressDialog = new ProgressDialog(ListUsersActivity.this);
-        progressDialog.setMessage("Please waiting...");
+        progressDialog.setMessage("Please wait...");
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 

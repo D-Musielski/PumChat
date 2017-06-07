@@ -27,7 +27,6 @@ import java.util.ArrayList;
 public class ChatDialogsActivity extends AppCompatActivity {
 
     Button button;
-    //FloatingActionButton floatingActionButton;
     ListView listDialogs;
 
     @Override
@@ -42,10 +41,10 @@ public class ChatDialogsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat_dialogs);
 
         createSession();
-        
-        loadChatDialog();
 
         listDialogs = (ListView)findViewById(R.id.listDialogs);
+
+        loadChatDialog();
 
         button = (Button)findViewById(R.id.Add);
         button.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +80,7 @@ public class ChatDialogsActivity extends AppCompatActivity {
 
     private void createSession() {
         final ProgressDialog progressDialog = new ProgressDialog(ChatDialogsActivity.this);
-        progressDialog.setMessage("Please waiting...");
+        progressDialog.setMessage("Please wait...");
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 

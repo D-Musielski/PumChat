@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onError(QBResponseException e) {
-                        Toast.makeText(getBaseContext(), "Fail"+e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getBaseContext(),e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
             }
