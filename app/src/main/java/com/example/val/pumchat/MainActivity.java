@@ -1,8 +1,8 @@
 package com.example.val.pumchat;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,8 +13,6 @@ import com.quickblox.core.QBEntityCallback;
 import com.quickblox.core.exception.QBResponseException;
 import com.quickblox.users.QBUsers;
 import com.quickblox.users.model.QBUser;
-
-import java.io.Console;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,14 +49,19 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = usernameText.getText().toString();
-                String password = passwordText.getText().toString();
+                final String username = usernameText.getText().toString();
+                final String password = passwordText.getText().toString();
 
                 QBUser qbUser = new QBUser(username, password);
                 QBUsers.signIn(qbUser).performAsync(new QBEntityCallback<QBUser>() {
                     @Override
                     public void onSuccess(QBUser qbUser, Bundle bundle) {
                         Toast.makeText(getBaseContext(), "Success", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(MainActivity.this, ChatDialogsActivity.class);
+                        intent.putExtra("user", username);
+                        intent.putExtra("password", password);
+                        startActivity(intent);
                     }
 
                     @Override
