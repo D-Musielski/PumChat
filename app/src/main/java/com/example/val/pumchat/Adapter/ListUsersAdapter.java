@@ -43,11 +43,11 @@ public class ListUsersAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View vieww = view;
-        if(view == null){
+        if(vieww == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             vieww = inflater.inflate(android.R.layout.simple_list_item_multiple_choice, null);
-            TextView textView = (TextView)view.findViewById(android.R.id.text1);
+            TextView textView = (TextView)vieww.findViewById(android.R.id.text1);
             textView.setText(qbUserArrayList.get(i).getLogin());
         }
 

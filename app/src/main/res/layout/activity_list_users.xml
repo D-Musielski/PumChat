@@ -12,11 +12,13 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="40dp"></ListView>
 
-        <Button
-            android:id="@+id/createChatButton"
-            android:text="Create Chat"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></Button>
+    <Button
+        android:id="@+id/createChatButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="Create Chat"
+        android:textColor="#fff"></Button>
 
 </RelativeLayout>
