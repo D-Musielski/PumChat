@@ -10,9 +10,6 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.val.pumchat.Adapter.ListUsersAdapter;
-import com.example.val.pumchat.Common.Common;
-import com.example.val.pumchat.Holder.QBUsersHolder;
 import com.quickblox.chat.QBChatService;
 import com.quickblox.chat.QBRestChatService;
 import com.quickblox.chat.model.QBChatDialog;
@@ -148,4 +145,5 @@ public class ListUsersActivity extends AppCompatActivity {
             }
         });
     }
+
 }

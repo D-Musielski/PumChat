@@ -1,4 +1,4 @@
-package com.example.val.pumchat.Adapter;
+package com.example.val.pumchat;
 
 import android.content.Context;
 import android.view.LayoutInflater;

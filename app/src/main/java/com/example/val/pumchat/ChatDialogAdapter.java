@@ -1,16 +1,12 @@
-package com.example.val.pumchat.Adapter;
+package com.example.val.pumchat;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.amulyakhare.textdrawable.TextDrawable;
-import com.example.val.pumchat.R;
 import com.quickblox.chat.model.QBChatDialog;
 
 import java.util.ArrayList;
@@ -54,23 +50,11 @@ public class ChatDialogAdapter extends BaseAdapter{
             TextView textTitle;
             TextView textMessage;
 
-            ImageView imageView;
-
             textTitle = (TextView)vieww.findViewById(R.id.dialogTitle);
             textMessage = (TextView)vieww.findViewById(R.id.dialogMessage);
-            imageView = (ImageView)vieww.findViewById(R.id.dialogImage);
 
             textMessage.setText(qbChatDialogs.get(i).getLastMessage());
             textTitle.setText((qbChatDialogs.get(i).getName()));
-
-            TextDrawable.IBuilder builder = TextDrawable.builder().beginConfig()
-                    .withBorder(4)
-                    .endConfig()
-                    .round();
-
-            TextDrawable drawable = builder.build(textTitle.getText().toString().substring(0,1).toUpperCase(), Color.rgb(63, 81, 181));
-
-            imageView.setImageDrawable(drawable);
 
         }
         return vieww;

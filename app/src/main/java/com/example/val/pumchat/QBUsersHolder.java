@@ -1,4 +1,4 @@
-package com.example.val.pumchat.Holder;
+package com.example.val.pumchat;
 
 import android.util.SparseArray;
 
